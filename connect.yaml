@@ -1,6 +1,6 @@
 deployAs:
   - name: flowers-custom-application
-    applicationType: service
+    applicationType: merchant-center-custom-application
     endpoint: /
     configuration:
       standardConfiguration:
