@@ -1,0 +1,16 @@
+mutation UpdateOrderDetails(
+  $orderId: String!
+  $version: Long!
+  $actions: [OrderUpdateAction!]!
+) {
+  updateOrder(id: $orderId, version: $version, actions: $actions) {
+    id
+    version
+    key
+    roles
+    nameAllLocales {
+      locale
+      value
+    }
+  }
+}

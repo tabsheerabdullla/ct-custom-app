@@ -1,0 +1,63 @@
+query FetchOrderDetails($orderId: String!) {
+  order(id: $orderId) {
+    id
+    orderNumber
+    customerEmail
+    totalPrice {
+      centAmount
+    }
+    shippingInfo {
+      shippingMethodName
+    }
+    lineItems {
+      productId
+      name(locale: "de-BE")
+      variant {
+        sku
+        attributesRaw {
+          name
+          value
+        }
+      }
+      custom {
+        customFieldsRaw {
+          name
+          value
+        }
+        type {
+          fieldDefinitions {
+            name
+            labelAllLocales {
+              value
+              locale
+            }
+          }
+        }
+      }
+      nameAllLocales {
+        locale
+        value
+      }
+      id
+      quantity
+      totalPrice {
+        centAmount
+      }
+    }
+    custom {
+      customFieldsRaw {
+        name
+        value
+      }
+      type {
+        fieldDefinitions {
+          name
+          labelAllLocales {
+            value
+            locale
+          }
+        }
+      }
+    }
+  }
+}

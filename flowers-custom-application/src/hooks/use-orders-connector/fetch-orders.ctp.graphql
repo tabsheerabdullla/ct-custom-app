@@ -1,0 +1,30 @@
+query FetchOrders($limit: Int!, $offset: Int!, $sort: [String!]) {
+  orders(limit: $limit, offset: $offset, sort: $sort) {
+    total
+    count
+    offset
+    results {
+      id
+      orderNumber
+      billingAddress {
+        lastName
+      }
+      paymentState
+      orderState
+      createdAt
+      customerEmail
+      shippingInfo {
+        shippingMethodName
+      }
+      totalPrice {
+        centAmount
+      }
+      custom {
+        customFieldsRaw {
+          name
+          value
+        }
+      }
+    }
+  }
+}
