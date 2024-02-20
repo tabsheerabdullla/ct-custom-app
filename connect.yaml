@@ -1,7 +1,7 @@
 deployAs:
-  - name: merchant-center-custom-application
+  - name: flowers-custom-application
     applicationType: merchant-center-custom-application
-    endpoint: /flowers-custom-app
+    endpoint: /
     configuration:
       standardConfiguration:
         - key: CTP_PROJECT_KEY
